@@ -7,6 +7,7 @@ def iterative_binary_search(arr, target):
     while low <= high:
         
         mid = (low + high) // 2
+        
         if target > arr[mid]:
             low = mid + 1
 
@@ -27,7 +28,7 @@ def recursive_binary_search(arr, target, low, high):
         if arr[mid] == target:
             return mid
         
-        elif arr[mid]  > target:
+        elif arr[mid] > target:
             return recursive_binary_search(arr, target, low, mid - 1)
 
         elif arr[mid] < target:

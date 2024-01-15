@@ -1,10 +1,11 @@
 use std::cmp::Ordering;
 
 fn main() {
-    println!("Iterative Binary Search");
-
+    
     let my_vector = vec![0, 2, 4, 5, 6, 7, 9, 10, 15, 22];
     let my_target = 4;
+
+    println!("Iterative Binary Search");
     let result = binary_search(&my_vector, &my_target);
 
     match result {
