@@ -1,7 +1,6 @@
 # algorithm-foundations
 
 
-
 ## Overview
 
 
@@ -10,12 +9,11 @@
 
 - Binary Search
 - Bubble Sort
+- Insertion Sort
 
 # TODO
 
-
 - Sort
-    - Insertion Sort
     - Quick Sort
     - Merge Sort
 

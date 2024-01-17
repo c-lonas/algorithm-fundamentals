@@ -1,9 +1,8 @@
 fn main() {
-    println!("Hello, world!");
 
-    let nums = [10, 5, 2, 8, 7, 1, 15, 5, 3, 4];
-
-    println!("Insert Sorted Array: ", nums)
+    let mut nums = [10, 5, 2, 8, 7, 1, 15, 5, 3, 4];
+    insert_sort(&mut nums);
+    println!("Insert Sorted Array: {:?}", nums)
 }
 
 fn insert_sort<T: Ord>(arr: &mut [T]) {
