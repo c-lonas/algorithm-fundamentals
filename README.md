@@ -9,12 +9,12 @@
 ## Current
 
 - Binary Search
+- Bubble Sort
 
 # TODO
 
 
 - Sort
-    - Bubble Sort
     - Insertion Sort
     - Quick Sort
     - Merge Sort
