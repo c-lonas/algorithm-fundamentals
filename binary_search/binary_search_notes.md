@@ -1,7 +1,7 @@
 # Binary Search
 
 - Binary search requires a sorted array
-- O(log n)
+- Time complexity: O(log n)
 - Iterative and recursive variations
 
 ## Conceptual Overview
