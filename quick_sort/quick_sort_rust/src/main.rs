@@ -6,7 +6,6 @@ fn main() {
 
 }
 
-
 fn quick_sort<T: Ord>(arr: &mut [T], low: usize, high: usize) {
     if low < high {
         
@@ -17,7 +16,6 @@ fn quick_sort<T: Ord>(arr: &mut [T], low: usize, high: usize) {
         quick_sort(arr, pivot_index + 1, high);
     }
 }
-
 
 fn partition_helper<T: Ord>(arr: &mut [T], mut l: usize, mut r: usize) -> usize {
     let pivot_index = (l + r) / 2;

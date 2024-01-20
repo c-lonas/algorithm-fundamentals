@@ -6,7 +6,6 @@ def main():
     quick_sort(nums, 0, len(nums) - 1)
     print("Quicksorted Array: ", (nums))
 
-
 def quick_sort(arr, low, high):
     if low < high:
         mid = (low + high) // 2
@@ -14,7 +13,6 @@ def quick_sort(arr, low, high):
         pivot_index = partition_helper(arr, low, high, pivot)
         quick_sort(arr, low, pivot_index - 1)
         quick_sort(arr, pivot_index + 1, high)
-
 
 def partition_helper(arr, l, r, pivot):
     
