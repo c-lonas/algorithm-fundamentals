@@ -1,6 +1,6 @@
 def main():
 
-    nums = [10, 5, 2, 8, 7, 1, 15, 5, 3, 4]
+    nums = [3, 10, 5, 2, 8, 7, 1, 15, 6, 11, 4]
     # print(quick_sort_list_comprehension(nums))
 
     quick_sort(nums, 0, len(nums) - 1)
@@ -8,28 +8,19 @@ def main():
 
 def quick_sort(arr, low, high):
     if low < high:
-        mid = (low + high) // 2
-        pivot = arr[mid]
-        pivot_index = partition_helper(arr, low, high, pivot)
+        pivot_index = qs_partition(arr, low, high)
         quick_sort(arr, low, pivot_index - 1)
         quick_sort(arr, pivot_index + 1, high)
 
-def partition_helper(arr, l, r, pivot):
-    
-    while l <= r:
-
-        while arr[l] < pivot:
-            l += 1
-        
-        while arr[r] > pivot: 
-            r -= 1
-
-        if l <= r:
-            arr[l], arr[r] = arr[r], arr[l]
-            l += 1
-            r -= 1
-
-    return l
+def qs_partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    for j in range(low, high):
+        if arr[j] < pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
     
 
 # The list comprehension implementation does NOT sort in place. 
