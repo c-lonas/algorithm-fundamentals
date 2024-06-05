@@ -10,7 +10,7 @@
 
 Bubble sort hinges around the nested `for loop`- which incidentally, is also why this has poor performance (`O(n²)`)
 
-The idea of bubble sort is simple and easy to think through, which is why it is commonly taught. 
+The idea of bubble sort is simple and easy to think through, which is why it is more commonly used in educational settings than it is actually applied as to sort in the real world. 
 
 You iterate through your array, and check whether or not the first element is greater than the one to its right. If it is, they switch places. You continue until you reach the end of the array, and then repeat the process with each remaining element in the array.
 
