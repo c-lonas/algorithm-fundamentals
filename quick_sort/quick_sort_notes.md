@@ -10,7 +10,7 @@
 
 # Conceptual Overview
 
-Like indicated above, this is a 'divider-and-conquer' type algorithm. 
+Like indicated above, this is a 'divide-and-conquer' type algorithm. 
 
 It selects a 'pivot' element from the array, and then partitions the rest of the elements into two sub-arrays based on whether the elements are greater or less than the pivot. Each of these sub-arrays are then sorted recursively.
 

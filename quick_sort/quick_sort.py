@@ -25,8 +25,7 @@ def qs_partition(arr, low, high):
 
 # The list comprehension implementation does NOT sort in place. 
 # Calling it above I simply print out the results so the original array will remain unsorted for use
-# in the next quick sort implementation. If you wanted to retain the sorted array, you would just
-# store the output in a new variable
+# in the next quick sort implementation.
 def quick_sort_list_comprehension(arr):
     if len(arr) <= 1:
         return arr
