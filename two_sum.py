@@ -5,8 +5,9 @@ my_map = {}
 
 for i in range(len(nums)):
     my_map[nums[i]] = i
-    diff = target - nums[i]
-    if diff in my_map:
-        print(i, my_map[diff])
+    x = target - nums[i]
+
+    if x in my_map and my_map[x] != i:
+        print(i, my_map[x])
 
     
