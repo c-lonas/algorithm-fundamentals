@@ -26,7 +26,20 @@ class Node:
             else:
                 self.rightChild = Node(data)
                 return
-        
+
+    def search(self, value):
+        if value == self.data:
+            return str(value)+ " is found in the Binary Search Tree!"
+        elif value < self.data:
+            if self.leftChild:
+                return self.leftChild.search(value)
+            else:
+                return str(value)+ " is not in the Binary Search Tree :("
+        else:       
+            if self.rightChild:
+                return self.rightChild.search(value)
+            else:
+                return str(value)+ " is not in the Binary Search Tree :("
 
 
 root = Node(10)
@@ -38,3 +51,5 @@ root.insert(1)
 root.insert(15)
 
 root.PrintTree()
+
+print(root.search(90))
