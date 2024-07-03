@@ -27,17 +27,17 @@ class Node:
                 self.rightChild = Node(data)
                 return
 
-    def search(self, value):
+    def depth_first_search(self, value):
         if value == self.data:
             return str(value)+ " is found in the Binary Search Tree!"
         elif value < self.data:
             if self.leftChild:
-                return self.leftChild.search(value)
+                return self.leftChild.depth_first_search(value)
             else:
                 return str(value)+ " is not in the Binary Search Tree :("
         else:       
             if self.rightChild:
-                return self.rightChild.search(value)
+                return self.rightChild.depth_first_search(value)
             else:
                 return str(value)+ " is not in the Binary Search Tree :("
 
@@ -52,4 +52,4 @@ root.insert(15)
 
 root.PrintTree()
 
-print(root.search(90))
+print(root.depth_first_search(90))
