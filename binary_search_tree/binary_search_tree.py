@@ -1,3 +1,4 @@
+from collections import deque
 
 class Node:
     def __init__(self, data):
@@ -41,6 +42,20 @@ class Node:
             else:
                 return str(value)+ " is not in the Binary Search Tree :("
 
+    def breadth_first_search(self, value):
+        queue = deque([self])
+
+        while queue:
+            node = queue.popleft()
+
+            if node.data == value:
+                return f"{value} is found in the Binary Search Tree!"
+            if node.leftChild:
+                queue.append(node.leftChild)
+            if node.rightChild:
+                queue.append(node.rightChild)
+        return f"{value} is not in the Binary Search Tree :("
+
 
 root = Node(10)
 root.insert(5)
@@ -52,4 +67,4 @@ root.insert(15)
 
 root.PrintTree()
 
-print(root.depth_first_search(90))
+print(root.breadth_first_search(99))
