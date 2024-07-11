@@ -61,9 +61,6 @@ root = Node(10)
 root.insert(5)
 root.insert(2)
 root.insert(99)
-root.insert(8)
-root.insert(1)
-root.insert(15)
 
 root.PrintTree()
 
